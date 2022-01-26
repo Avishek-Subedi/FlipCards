@@ -12,7 +12,13 @@ class FlashcardView extends StatelessWidget {
     return Card(
       elevation: 4,
       child: Center(
-        child: Text(text),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+          ),
+        ),
       ),
     );
   }
