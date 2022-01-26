@@ -78,7 +78,8 @@ class _MyAppState extends State<MyApp> {
 
   void showPreviousCard() {
     setState(() {
-      _currentIndex = (_currentIndex - 1 >= 0) ? -_currentIndex - 1 : 0;
+      _currentIndex =
+          (_currentIndex - 1 >= 0) ? _currentIndex - 1 : _flashcards.length - 1;
     });
   }
 }
