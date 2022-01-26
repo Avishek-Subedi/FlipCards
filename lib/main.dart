@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:flashcards/flashcard_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 
@@ -29,18 +30,8 @@ class _MyAppState extends State<MyApp> {
                 width: 250,
                 height: 250,
                 child: FlipCard(
-                  front: Card(
-                    elevation: 4,
-                    child: Center(
-                      child: Text("Sexy flashcard"),
-                    ),
-                  ),
-                  back: Card(
-                    elevation: 4,
-                    child: Center(
-                      child: Text("Welcome to the backside"),
-                    ),
-                  ),
+                  front: FlashcardView(text: "this is the front "),
+                  back: FlashcardView(text: "this is the back of the card"),
                 ),
               ),
               Row(
